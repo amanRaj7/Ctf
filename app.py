@@ -7,7 +7,7 @@ st.title("File Reader via Query Parameter")
 query_params = st.query_params if hasattr(st, 'query_params') else st.experimental_get_query_params()
 
 # Extract the filename
-file_param = query_params.get("q", [None])[0]
+file_param = query_params.get("q", [None])
 
 if file_param:
     st.subheader(f"Reading file: `{file_param}`")
